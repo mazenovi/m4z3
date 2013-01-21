@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="generator" content="Slide Show (S9); see slideshow.rubyforge.org">
+<meta name="author" content="<%= @headers['author']%>">
+
+<title><%= @headers['title'] %></title>
+
+<!-- Don't alter this, CSSS needs it to work -->
+<link href="slideshow.css" rel="stylesheet" />
+
+<!-- Theme-specific styles go here (themes can be reused in multiple talks) -->
+<link href="theme.css" rel="stylesheet" />
+
+<!-- SyntaxHighlighter (sh) style sheet; goes first so we can override styles if needed -->
+<!-- todo: add theme-ing support -->
+<link rel="stylesheet" href="highlighter/shCoreDefault.css">
+
+<!-- SyntaxHighlighter (sh) machinery -->
+<script src="highlighter/shCore.js"></script>
+
+<!-- SyntaxHighlighter brushes, remove those for languages you don't need --> 
+<script src="highlighter/shBrushAppleScript.js"></script>
+<script src="highlighter/shBrushAS3.js"></script>
+<script src="highlighter/shBrushBash.js"></script>
+<script src="highlighter/shBrushColdFusion.js"></script>
+<script src="highlighter/shBrushCpp.js"></script>
+<script src="highlighter/shBrushCSharp.js"></script>
+<script src="highlighter/shBrushCss.js"></script>
+<script src="highlighter/shBrushDelphi.js"></script>
+<script src="highlighter/shBrushDiff.js"></script>
+<script src="highlighter/shBrushErlang.js"></script>
+<script src="highlighter/shBrushGroovy.js"></script>
+<script src="highlighter/shBrushJavaFX.js"></script>
+<script src="highlighter/shBrushJava.js"></script>
+<script src="highlighter/shBrushJScript.js"></script>
+<script src="highlighter/shBrushPerl.js"></script>
+<script src="highlighter/shBrushPhp.js"></script>
+<script src="highlighter/shBrushPlain.js"></script>
+<script src="highlighter/shBrushPowerShell.js"></script>
+<script src="highlighter/shBrushPython.js"></script>
+<script src="highlighter/shBrushRuby.js"></script>
+<script src="highlighter/shBrushSass.js"></script>
+<script src="highlighter/shBrushScala.js"></script>
+<script src="highlighter/shBrushSql.js"></script>
+<script src="highlighter/shBrushVb.js"></script>
+<script src="highlighter/shBrushXml.js"></script>
+
+<!-- Talk-specific styles go here -->
+<!-- GB: changed fixed name (talk.css) to variable -->
+<link href="css/font-awesome.css" rel="stylesheet" />
+<link href="css/font-awesome-slideshow.css" rel="stylesheet" />
+<link href="<%= "#{@name}.css" %>" rel="stylesheet" />
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+	
+</head>
+<!-- GB: todo: add duration header/property -->
+<!-- body data-duration="45"-->
+<body>
+
+<header id="intro" class="slide">
+	<h1><%= @headers['title'] %></h1>
+	<p class="attribution">
+		By <%= @headers['author']%>
+		<span class="menu"><%= @headers['menu']%></span>
+	</p>
+</header>
+
+  <section class="slide">
+	<h1>Vincent Mazenod</h1>
+	<ul>
+		<li class="briefcase"> Ingénieur d'Etudes au CNRS</li>
+		<li class="network"> En charge du Système d'information du CERDI</li>
+		<li class="home"> Bureau 32 - 3<sup>ème</sup> étage</li>
+		<li class="phone"> 04 73 17 74 32</li>
+		<li class="mail"><a href="mailto:vincent.mazenod@udamail.fr">vincent.mazenod@udamail.fr</a></li>
+		<li class="megaphone"><a href="http://blog.mazenod.fr">http://blog.mazenod.fr</a></li>
+		<li class="github"><a href="http://github.com/mazenovi">http://github.com/mazenovi</a></li>
+		<li class="twitter"><a href="http://twitter.com/mazenovi">http://twitter.com/mazenovi</a></li>
+		<li class="linkedin"><a href="http://linkedin.com/mazenovi">http://linkedin.com/mazenovi</a></li>
+		<li class="facebook"><a href="http://facebook.com/mazenovi">http://facebook.com/mazenovi</a></li>
+	</ul>
+  </section>
+
+<!-- note: assumes no header (breaking slides w/ SLIDE directive) -->
+<% @slides.each do |slide| %>
+  <section class="slide">
+
+	<div class="slide-head">
+		<%= @headers['head'] %>
+	</div>
+	
+	<%= slide.content %>
+
+	<div class="slide-foot">
+		<%= @headers['foot'] %>
+	</div>
+
+  </section>
+<% end %>
+
+
+<!--
+<footer class="slide">
+	<h2>Thank you!</h2>
+	<p>Closing remarks</p>
+</footer>
+-->
+
+<script src="slideshow.js"></script>
+
+<!-- Make sure the reference to -prefix-free works -->
+<script src="prefixfree.min.js"></script>
+
+<!-- Uncomment the plugins you need
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+-->
+<script>
+var slideshow = new SlideShow();
+SyntaxHighlighter.all()
+<%= content_for :js %>
+</script>
+	
+</body>
+</html>

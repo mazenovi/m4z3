@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'palatina';
+  font-style: normal;
+  font-weight: normal;
+  src: local('palatina'), url('font/pala.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'turnb';
+  font-style: normal;
+  font-weight: normal;
+  src: local('turnb'), url('font/TURNB___.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'stylus';
+  font-style: normal;
+  font-weight: normal;
+  src: local('stylus'), url('font/Grand_Stylus.ttf') format('truetype');
+}
+
+html {
+	font-family: palatina;
+	background-image: url('images/background.png');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.slide{
+	font-family: palatina;
+	color: #99b3c6;
+	margin: 0;
+	background: none repeat scroll 0 0 padding-box rgba(0, 0, 0, 0.1);
+/*	border-bottom: 60px solid transparent;*/
+	}	
+	.slide > ul > li:before {
+	    color: #666666;
+/*    	content: "✔";*/
+	    padding-right: 10px;
+		}
+		.slide li li:before {
+	    color: #666666;
+/*    	content: "➜";*/
+	    padding-right: 10px;
+		}
+
+	.slide p, .slide li{
+		font-weight: normal;
+	}
+	.slide h1{
+		font-size: 160%;
+		font-weight: bold;	
+		border-bottom: 	1px solid #E62C39;
+	}
+	.slide h2{
+	  font-family: 'palatina';
+		font-weight: bold;
+		font-size: 140%;		
+		line-height: none;
+	}
+
+
+.slide-foot{
+	background-size: 400px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	color: white;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	font-weight: normal;
+	font-size: 20px;
+	letter-spacing: 5px;
+	text-align: center;
+	}
+	.slide-foot a{
+		text-decoration: none;
+	}
+	.slide-foot #punk{
+		float: left;
+	}
+	.slide-foot #cc-license{
+		float: right;
+	}
+	.slide-foot img{
+		height: 30px;
+	}
+
+
+#intro {
+	background: none;
+	padding: 0;
+	border: 0;
+}
+
+#intro h1 {
+	width: 90%;
+	min-height: 500px;
+	margin: 2% auto 0;
+	font-size: 260%;
+	text-align: center;
+	border: none;
+}
+
+#intro .attribution {
+	font-family: turnb;
+	text-align: center;
+	font-size: 100%;
+	bottom: 2em;
+	}
+	#intro .attribution br{
+		font-size: 20%;
+	}
+	#intro .attribution .menu{
+		line-height: 16px;
+		font-family: palatina;
+		text-align: center;
+		font-size: 40%;
+		padding: 0;
+		margin: 0;
+	}
+
+.slide .notes{
+	text-align: right;
+	font-size: 14px;
+	vertical-align: bottom;
+	position: absolute;
+	  right: 0;
+	left: 0;
+  	bottom: 10px;
+	padding-right: 10px;
+}
+.slide em{
+	font-style: italic;
+}
+
+<%= content_for :css %>

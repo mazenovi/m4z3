@@ -1,0 +1,4 @@
+#  S6 syntax highlighter template package manifest
+
+__file__.pdf.html  slides.pdf.html.erb
+

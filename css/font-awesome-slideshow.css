@@ -1,0 +1,104 @@
+.slide h2.comment:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+		font-size: 300px;
+}
+.slide .flag:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+
+.slide .ban-circle:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+    padding-right: 10px;
+}
+.slide .hand:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+    padding-right: 10px;
+}
+
+.slide > ul > li.briefcase:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.network:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.home:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.phone:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.mail:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.github:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.facebook:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.twitter:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.linkedin:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.google:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.megaphone:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.globe:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
+.slide > ul > li.cloud:before {
+		font-family: FontAwesome;
+    content: "";
+		color: gray;
+}
+
