@@ -9,7 +9,7 @@ my slideshow template based on [csss](https://github.com/geraldb/slideshow-csss)
 
 If you want to try it yourself, install (fetch) the new template pack. Issue the command:
 
-    $ slideshow -f https://github.com/mazenovi/m4z3.git/raw/master/m4z3.txt
+    $ slideshow -f https://raw.github.com/mazenovi/m4z3/master/m4z3.txt
 
 To check if the new template got installed, use the `-l/--list` switch/command:
 
